@@ -26,9 +26,7 @@ body {
     background-image: none;
     background-color: #ffffff;
 }
-.background-trans {
 
-}
 header {
     width: 100%;
 
@@ -36,13 +34,7 @@ header {
 }
 main {
     max-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: 30px
+   
 }
 #main-container {
     max-width: 1200px;
@@ -191,7 +183,7 @@ header {
 }
 #salon__img {
     width: 40vw;
-    border-radius: 3%;;
+    border-radius: 10px;
 }
 #prestations {
     width: 100%;
@@ -269,7 +261,7 @@ header {
     color: rgba(0, 0, 0, 0.5);
 }
 #temoignages {
-    max-width: 1200px
+    max-width: 1200px;
     width: 100%;
     margin-top: 30px;
     padding: 20px;
@@ -351,14 +343,14 @@ header {
 }
 
 .carousel-button.prev {
-    left: 10px;
+    left: -35px;
     color: #a6a6a6;
     font-size: 90px;
     margin-left: 50px;
 }
 
 .carousel-button.next {
-    right: 10px;
+    right: 0px;
     color: #a6a6a6;
     font-size: 90px;
     margin-right: 50px;
@@ -390,6 +382,21 @@ header {
 #ML__img {
     width: 40%;
     border-radius: 50%;;
+}
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 footer {
     height: 50px;
