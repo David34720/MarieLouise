@@ -243,32 +243,66 @@
                 </div>
                 
             </section>
-            <section>
-                <div class="locations">
-                    <div class="location">
-                        <h4 class="location__title location__period">Période</h4>
-                        <div class="location__day location__period">Journée</div>
-                        <div class="location__month location__period">Mensuel</div>
-                        <div class="location__hour location__period">A l'heure</div>
+            <section class="container--locations">
+                <div class="locations-header">
+                    <h2 class="locations-header__title" id="location">Espaces dédiés à la location professionnelle chez Studio Marie Louise !</h2>
+                </div>
+                <div class="locations__container" id="Loc-id-style">
+                    <div class="location-subTitle-header location__grid-item location__grid-1">
+                        <h3 class="location-subtitle-header-h3"></h3>Vous recherchez un cadre équipé pour une heure, une journée ou plus ?</h2>
+                        <span id="Loc-id-style-2"></span>
+                        <em>Nous mettons à votre disposition des espaces dédiés aux professionnels indépendants, situés en plein centre-ville de Metz, nichés à l'étage, dans un endroit intimiste et original.</em>
+                        
                     </div>
-                    <div class="location">
-                        <h4 class="location__title location__period">Cabine Esthétique</h4>
-                        <div class="location__day location__price">120 €</div>
-                        <div class="location__month location__price">960 €</div>
-                        <div class="location__hou location__price">18 €</div>
+                    <div class="locations-header-h4 location__grid-item location__grid-2 locGridOpacity">
+                        <h4 class="locations-header-massage__title">Cabine destinée aux esthéticiens(nes), masseurs(ses)</h4><span id="location-scroll"></span>
                     </div>
-                    <div class="location">
-                        <h4 class="location__title location__period">Fauteuil Coiffure</h4>
-                        <div class="location__day location__price">120 €</div>
-                        <div class="location__month location__price">960 €</div>
-                        <div class="location__hour location__price">18 €</div>
+                    <div class="location__grid-2-img location__grid-item">
+                        <img src="./img/location-massage-studio-marie-louise.jpeg" alt="" class="location__grid__img">
+
                     </div>
-                    <div class="location">
-                        <h4 class="location__title location__period">Poste Onglerie</h4>
-                        <div class="location__day location__price">84 €</div>
-                        <div class="location__month location__price">600 €</div>
-                        <div class="location__hour location__price"></div>
+                    <div class="locations-header-h4 location__grid-item location__grid-3 locGridOpacity">
+                        <h4 class="locations-header-nail__title">Poste d'onglerie pour les prothésistes ongulaire</h4>
                     </div>
+                    <div class="location__grid-3-img location__grid-item locGridOpacity-2">
+                        <img src="./img/location-onglerie-studio-marie-louise.jpeg" alt="" class="location__grid__img">
+
+                    </div>
+                    <div class="locations-header-h4 location__grid-item location__grid-4 locGridOpacity-3">
+                        <h4 class="locations-header-hair__title">Fauteuil de coiffure dernier cri pour les coiffeurs(ses).</h4>
+                    </div>
+                    <div class="location__grid-4-img location__grid-item locGridOpacity-2">
+                        <img src="./img/location-coiffure-studio-marie-louise.jpeg" alt="" class="location__grid__img">
+
+                    </div>
+                    <div class="locations location__grid-item location__grid-5 locGridOpacity-3" >
+                        <div class="location">
+                            <h4 class="location__title location__period">Période</h4>
+                            <div class="location__day location__period">Journée</div>
+                            <div class="location__month location__period">Mensuel</div>
+                            <div class="location__hour location__period">A l'heure</div>
+                        </div>
+                        <div class="location">
+                            <h4 class="location__title location__period">Cabine Esthétique</h4>
+                            <div class="location__day location__price">120 €</div>
+                            <div class="location__month location__price">960 €</div>
+                            <div class="location__hou location__price">18 €</div>
+                        </div>
+                        <div class="location">
+                            <h4 class="location__title location__period">Fauteuil Coiffure</h4>
+                            <div class="location__day location__price">120 €</div>
+                            <div class="location__month location__price">960 €</div>
+                            <div class="location__hour location__price">18 €</div>
+                        </div>
+                        <div class="location">
+                            <h4 class="location__title location__period">Poste Onglerie</h4>
+                            <div class="location__day location__price">84 €</div>
+                            <div class="location__month location__price">600 €</div>
+                            <div class="location__hour location__price" id="Loc-id-style-3">--</div>
+                            
+                        </div>
+                    </div>
+
                 </div>
                 
             </section>
@@ -373,6 +407,111 @@
 
         const observer = new IntersectionObserver(callback, options);
         observer.observe(temoignagesSectionML);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const temoignagesSectionLoc = document.getElementById('location');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.body.classList.add('background-Loc');
+
+                } else {
+                    document.body.classList.remove('background-Loc');
+
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(temoignagesSectionLoc);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const temoignagesSectionLocScroll = document.getElementById('location-scroll');
+        const gridScroll = document.getElementById('Loc-id-style');
+        const locationScrollItemOpacity = document.querySelectorAll('.locGridOpacity');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gridScroll.classList.add('locations__container-scroll');
+                    locationScrollItemOpacity.forEach(item => {
+                    item.style.opacity = '1';
+                });
+
+                } else {
+                    gridScroll.classList.remove('locations__container-scroll');
+                    locationScrollItemOpacity.forEach(item => {
+                    item.style.opacity = '0';
+                });
+                }
+            });
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(temoignagesSectionLocScroll);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const gridScroll2 = document.getElementById('Loc-id-style-2');
+        const locationScrollItemOpacity2 = document.querySelectorAll('.locGridOpacity-2');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    locationScrollItemOpacity2.forEach(item => {
+                    item.style.opacity = '1';
+                });
+
+                } else {
+                    
+                    locationScrollItemOpacity2.forEach(item => {
+                    item.style.opacity = '0';
+                });
+                }
+            });
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(gridScroll2);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const gridScroll3 = document.getElementById('Loc-id-style-3');
+        const locationScrollItemOpacity3 = document.querySelectorAll('.locGridOpacity-3');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.body.classList.add('background-Loc');
+                    locationScrollItemOpacity3.forEach(item => {
+                    item.style.opacity = '1';
+                });
+
+                } else {
+                    document.body.classList.remove('background-Loc');
+                    locationScrollItemOpacity3.forEach(item => {
+                    item.style.opacity = '0';
+                });
+                }
+            });
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(gridScroll3);
     });
     </script>
 </body>

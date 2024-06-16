@@ -22,6 +22,10 @@ body {
     background-image: none;
     background-color: #000;
 }
+.background-Loc {
+    background-image: none;
+    background-color: #000;
+}
 .background-transition {
     background-image: none;
     background-color: #ffffff;
@@ -156,8 +160,7 @@ header {
 }
 .container {
     margin: 0 auto;
-    width: 100vw;
-    
+    width: 100%;
 }
 #prestation {
     width: 100%;
@@ -261,7 +264,6 @@ header {
     color: rgba(0, 0, 0, 0.5);
 }
 #temoignages {
-    max-width: 1200px;
     width: 100%;
     margin-top: 30px;
     padding: 20px;
@@ -421,6 +423,21 @@ footer {
     text-align: right;
     font-size: 0.8rem;
 }
+.container--locations {
+    display: flex;
+    flex-direction: row;
+    background-color: #e8e8e8;
+    align-items: flex-start;
+    height: min-content;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+.locations-header {
+    width: 45%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 .locations {
     background-color: #ffffff;
     display: flex;
@@ -428,16 +445,16 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-
 }
 .location {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
     flex-direction: column;
-    gap: 50px;
-    padding: 10px;
+    gap: 20px;
+    padding: 20px;
     width: 25%;
+    align-items: center;
 }
 .location__period {
     display: flex;
@@ -446,15 +463,25 @@ footer {
     font-size: 1.1rem;
     text-align: center;
     justify-content: flex-end;
-
+    opacity: 0.4;
     align-items: flex-start;
+    color: #000;
 }
 .location__price {
     text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .location__title {
     color: #000000;
     height: 40px;
+    opacity: 0.4;
 }
 .location__day {
 
@@ -464,4 +491,95 @@ footer {
 }
 .location__hour {
 
+}
+.locations__container {
+    margin: 0 auto; /* Centre le conteneur */
+    display: grid;
+    
+    gap: 20px;
+    grid-template-columns: repeat(4, calc((90vw - 60px) / 4));
+    grid-template-rows: repeat(4, calc((90vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
+
+    grid-template-areas: 
+    'grid-2 grid-2-img  grid-2-img grid-3'
+    'grid-4-img grid-2-img grid-2-img grid-3-img'
+    'grid-4-img grid-1 grid-1 grid-3-img'
+    'grid-4 grid-5 grid-5 grid-5';     
+    
+        
+}
+
+.locations__container-scroll {
+    margin: 0 auto; /* Centre le conteneur */
+    display: grid;
+    grid-template-columns: repeat(4, calc((90vw - 60px) / 4));
+    grid-template-rows: repeat(4, calc((90vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
+    grid-template-areas: 
+        'grid-2 grid-2-img  grid-2-img grid-3'
+        'grid-4-img grid-2-img grid-2-img grid-3-img'
+        'grid-4-img grid-1 grid-1 grid-3-img'
+        'grid-4 grid-5 grid-5 grid-5';     
+}
+.location-subTitle-header {
+    padding: 30px;
+}
+.locations-header-h4 {
+    padding: 20px;
+}
+.location__grid-item {
+    width: 100%;
+    height: 100%; /* Remplir toute la cellule de la grille */
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+    transition: opacity 1s ease-in-out;
+}
+.location__grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image s'ajuste à la div sans déborder */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.location__grid-1 {
+    grid-area: grid-1;
+    background-color: #ffffff;
+    color: #000000;
+}
+.location__grid-2 {
+    grid-area: grid-2;
+}
+.location__grid-2-img {
+    grid-area: grid-2-img;
+    width: 100%;
+}
+.location__grid-3 {
+    grid-area: grid-3;
+}
+.location__grid-3-img {
+    grid-area: grid-3-img;
+    width: 100%;
+}
+.location__grid-4 {
+    grid-area: grid-4;
+}
+.location__grid-4-img {
+    grid-area: grid-4-img;
+    width: 100%;
+}
+.location__grid-5 {
+    grid-area: grid-5;
+    background-color: #0000006b;
+    color: #ffffff;
 }
