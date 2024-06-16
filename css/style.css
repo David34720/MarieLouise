@@ -483,22 +483,14 @@ footer {
     height: 40px;
     opacity: 0.4;
 }
-.location__day {
 
-}
-.location__month {
-
-}
-.location__hour {
-
-}
 .locations__container {
     margin: 0 auto; /* Centre le conteneur */
     display: grid;
     
     gap: 20px;
-    grid-template-columns: repeat(4, calc((90vw - 60px) / 4));
-    grid-template-rows: repeat(4, calc((90vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
+    grid-template-columns: repeat(4, calc((80vw - 60px) / 4));
+    grid-template-rows: repeat(4, calc((80vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
 
     grid-template-areas: 
     'grid-2 grid-2-img  grid-2-img grid-3'
@@ -512,8 +504,8 @@ footer {
 .locations__container-scroll {
     margin: 0 auto; /* Centre le conteneur */
     display: grid;
-    grid-template-columns: repeat(4, calc((90vw - 60px) / 4));
-    grid-template-rows: repeat(4, calc((90vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
+    grid-template-columns: repeat(4, calc((80vw - 60px) / 4));
+    grid-template-rows: repeat(4, calc((80vw - 60px) / 4)); /* Ajuste les lignes automatiquement */
     grid-template-areas: 
         'grid-2 grid-2-img  grid-2-img grid-3'
         'grid-4-img grid-2-img grid-2-img grid-3-img'
@@ -582,4 +574,97 @@ footer {
     grid-area: grid-5;
     background-color: #0000006b;
     color: #ffffff;
+}
+.press__container {
+    width: 90%;
+    margin: 0 auto;
+}
+.locations-header {
+    width: 90%;
+}
+.press {
+    width: 100%;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 20px; /* Ajoute un peu de padding */
+    box-sizing: border-box;
+    background-color: #000;
+    color: #e8e8e8;
+}
+.press__title {
+    color: #e8e8e8;
+    
+}
+.press__container {
+    margin-top: 50px;
+   
+}
+
+
+.press-grid {
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 10px;
+}
+
+.press-grid__img {
+    overflow: hidden;
+    position: relative; /* Pour positionner l'image absolument à l'intérieur */
+    width: 100%;
+    padding-bottom: 100%; /* Ratio carré initial */
+    border-radius: 20px;
+}
+.press__title-h2 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    justify-content: center;
+}
+.press__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur sans déformation */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }

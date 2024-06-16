@@ -23,7 +23,7 @@
                 <li>Location</li>
                 <li>location</li>
             </ol>
-        </nav>
+        </nav> 
     </nav>
     <header>
         <div id="header__presentation">
@@ -190,14 +190,24 @@
                         </div>
                         <div class="temoignage__card">
                             <p class="temoignage__quote">&rdquo;</p>
-                            <p class="temoignage__text">Sa passion et son travail ont fait son talent...et avec ce talent, ma femme est magnifique! Merci Marie Louise </p>
-                            <p class="temoignage__author">David</p>
+                            <p class="temoignage__text">
+                                C'est toujours un plaisir d'aller au STUDIO Marie Louise. L'ambiance est chaleureuse, l'accueil est excellent. De plus, elle s'investie dans l'écologie en proposant une gamme de soins et de produits respectant l'environnement .
+                               Marie Louise s'adapte à ses clients en proposant une offre personnalisée.
+                                Son Studio propose une offre complète en coiffure et en esthétique.
+                                Je recommande vivement le Studio Marie Louise!</p>
+                            <p class="temoignage__author">Natacha</p>
                         </div>
                         <div class="temoignage__card">
                             <p class="temoignage__quote">&rdquo;</p>
                             <p class="temoignage__text">Lieu chaleureux où les prestations sont multiples et de qualité où l'on m'a convaincu de faire mes sourcils maitrisant la technique microblading et j'en suis ravie!!! Les produits utilisés et vendus sur place sont au top! Je conseille à toutes et à tous</p>
                             <p class="temoignage__author">Nadège</p>
                         </div>
+                        <div class="temoignage__card">
+                            <p class="temoignage__quote">&rdquo;</p>
+                            <p class="temoignage__text">Sa passion et son travail ont fait son talent...et avec ce talent, ma femme est magnifique! Merci Marie Louise </p>
+                            <p class="temoignage__author">David</p>
+                        </div>
+                        
                         <div class="temoignage__card">
                             <p class="temoignage__quote">&rdquo;</p>
                             <p class="temoignage__text">Fidèle depuis + de 10 ans, coiffure, soins esthétique, microblading, toujours parfait , rien à redire. Même l'accueil est génial.
@@ -209,15 +219,7 @@
                             <p class="temoignage__text">Je me rends désormais les yeux fermés chez Marie Louise car avec son expérience, elle sait ce qui me convient et ses conseils sont toujours justes. Que ce soit la coupe ou les mèches, la maitrise du geste fait vraiment la différence. mes cheveux colorés restent beaux grâce aux soins appliqués ( le replex fait des miracles) . La prochaine fois, je testerai sans doute un soin à l'institut!</p>
                             <p class="temoignage__author">Caroline</p>
                         </div>
-                        <div class="temoignage__card">
-                            <p class="temoignage__quote">&rdquo;</p>
-                            <p class="temoignage__text">
-                                C'est toujours un plaisir d'aller au STUDIO Marie Louise. L'ambiance est chaleureuse, l'accueil est excellent. De plus, elle s'investie dans l'écologie en proposant une gamme de soins et de produits respectant l'environnement .
-                               Marie Louise s'adapte à ses clients en proposant une offre personnalisée.
-                                Son Studio propose une offre complète en coiffure et en esthétique.
-                                Je recommande vivement le Studio Marie Louise!</p>
-                            <p class="temoignage__author">Natacha</p>
-                        </div>
+                        
                     </div>
                 </div>
                 <button class="carousel-button next">&gt;</button>
@@ -306,13 +308,23 @@
                 </div>
                 
             </section>
-            <!--lien page externe en production-->
-            <!--section id="externalPageSection">
-                <h2>Page Externe</h2>
-                <div class="iframe-container">
-                    <iframe src="https://booking.wavy.pro/studiomarielouise" frameborder="0"></iframe>
-                </div>
-            </section-->
+            <section class="press">
+                <div class="press__container">
+                    
+                    <div class="press-grid">
+                        <div class="press-grid__img"><img src="img/img-press/IMG_6281.jpeg" alt="" class="press__img"></div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-2.jpeg" alt="" class="press__img"></div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-3-femme-magasine.jpg" alt="" class="press__img"></div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-4-Republicain-lorrain.jpg" alt="" class="press__img"></div>
+                        <div class="locations-header press__title-h2 press-grid__img">
+                            <h2 class="press__title">La presse parle de notre studio !</h2>
+                        </div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-5-petit-fute.jpg" alt="" class="press__img"></div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-6-femme-magasine.jpeg" alt="" class="press__img"></div>
+                        <div class="press-grid__img"><img src="img/img-press/salon-coiffure-metz-presse-7-metz-femme.jpeg" alt="" class="press__img"></div>
+                        <div class="press-grid__img" id="press-id"><img src="img/img-press/salon-coiffure-metz-presse-8-label.jpeg" alt="" class="press__img"></div>
+                    </div>
+            </section>
         </main>
         
     </div>
@@ -324,6 +336,11 @@
                 <p class="footer__text">03 87 36 04 88 | contact@studiomarielouise.com </p>
             </div>
     </footer>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         const readMoreLinks = document.querySelectorAll('.read-more');
@@ -513,7 +530,61 @@
         const observer = new IntersectionObserver(callback, options);
         observer.observe(gridScroll3);
     });
+    // Get the modal
+    var modal = document.getElementById("modal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var modalImg = document.getElementById("modal-img");
+
+    document.querySelectorAll('.press__img').forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("modal-close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside of the image
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+    const press = document.getElementById('press-id');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+
+
+    const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.body.classList.add('background-Loc');
+
+                } else {
+                    document.body.classList.remove('background-Loc');
+
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(press);
+
+});
+
     </script>
+    
 </body>
 </html>
- <!--img src="./img/femme-beaute-1.jpg" alt=""-->
